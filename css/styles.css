@@ -1,0 +1,42 @@
+h1{
+	font-size:80px;
+	color: white;
+}
+
+li,p{
+
+	color: white;
+}
+
+
+.marketing{
+	position: center;
+	max-width: 768px;
+	margin: 40px 0;
+	padding-bottom: 5px;
+}
+
+.textarea{
+	padding-bottom: 25px;
+
+}
+
+
+.btn-default {
+    border: 1px solid #42dca3;
+    color: #42dca3;
+    background-color: transparent;
+}
+
+.btn-default:hover,
+.btn-default:focus {
+    border: 1px solid #42dca3;
+    outline: 0;
+    color: #000;
+    background-color: #42dca3;
+}
+
+/*.dropdown-toggle{
+	width:85px !important;
+
+}*/

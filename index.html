@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+   <title>GET some RESt</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/animate.min.css">
+
+    <!-- Custom CSS -->
+    <style>
+    body {
+        padding-top: 40px;
+        padding-left: 15px;
+        padding-right: 15px;
+        background-image: url(./img/intro-bg.jpg);
+        background-attachment: fixed;
+         background-size: cover;
+         background-repeat:   no-repeat;
+    background-position: center center;
+        /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+    }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- Page Content -->
+    <div class="container">
+
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h1 class="animated fadeInDownBig">GET some REST</h1>
+                <p class="lead animated lightSpeedIn">A simple REST client<br>Created by Bhuvan Malik</p>
+                <ul class="list-unstyled">
+                    <li>Vue.js</li>
+                    <li>Bootstrap</li>
+                </ul>
+            </div>
+        </div>
+        <!-- /.row -->
+        <br>
+        <br>
+        <br>
+
+    </div>
+    <!-- /.container -->
+
+ <div class="container animated fadeInDown">
+<center>
+    <div class="row marketing">
+        <div class="col-xs-1 col-md-1 col-md-offset-1 col-xs-offset-1">
+          <select class="selectpicker" data-width="fit" v-on:change="methodChange" v-model="method">
+
+        <option>GET</option>
+        <option>POST</option>
+        <option>PUT</option>
+        <option>PATCH</option>
+        <option>DELETE</option>
+      </select>
+
+        </div>
+        <div class="col-xs-8 col-md-8 col-md-offset-1 col-xs-offset-1">
+    <div class="input-group">
+      <input type="text" v-model="url" class="form-control" placeholder="enter url">
+      <span class="input-group-btn">
+        <button class="btn btn-default" type="button" v-on:click="send">Go</button>
+      </span>
+
+    </div><!-- /input-group -->
+  </div><!-- /.col-lg-6 -->
+</div>
+  </center>
+
+
+    <div class='textarea col-md-6 col-md-offset-3 col-xs-6 col-xs-offset-3'>
+        <label for="comment" v-bind:style="styleObject">JSON:</label>
+          <span class="label label-{{labelType}} col-md-offset-8 {{animation}}" v-bind:style="labelStyle">{{{labelMessage}}}</span>
+            <textarea class="form-control" rows="15" cols="500" v-model="textarea" v-bind:style="styleObject" ></textarea>
+    </div>
+
+</div>
+
+
+    <!-- jQuery Version 1.11.1 -->
+    <script src="js/jquery.js"></script>
+
+    <script src="js/vue.js"></script>
+
+
+
+        <!-- <script src="js/vue-resource.js"></script> -->
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.10.0/css/bootstrap-select.min.css">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.10.0/js/bootstrap-select.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue-resource/0.7.2/vue-resource.js"></script>
+
+<script src="js/index.js"></script>
+
+</body>
+
+</html>
+
+
+<!-- <li><a href="#" v-on:click="this.reqtype='GET'">GET</a></li>
+<li><a href="#" v-on:click="this.reqtype='POST'">POST</a></li>
+<li><a href="#" v-on:click="this.reqtype='PATCH'">PATCH</a></li>
+<li><a href="#" v-on:click="this.reqtype='PUT'">PUT</a></li>
+<li><a href="#" v-on:click="this.reqtype='DELETE'">DELETE</a></li> -->
+
+
+<!-- <div class="dropdown">
+<button class="btn btn-default dropdown-toggle" type="button"  id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+GET
+<span class="caret"></span>
+</button>
+<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+<li><a href="#" v-on:click="this.reqtype='GET'">GET</a></li>
+<li><a href="#" v-on:click="this.reqtype='POST'">POST</a></li>
+<li><a href="#" v-on:click="this.reqtype='PATCH'">PATCH</a></li>
+<li><a href="#" v-on:click="this.reqtype='PUT'">PUT</a></li>
+<li><a href="#" v-on:click="this.reqtype='DELETE'">DELETE</a></li>
+</ul>
+</div> -->

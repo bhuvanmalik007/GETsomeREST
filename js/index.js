@@ -40,6 +40,11 @@ el: 'body',
     },
   	send: function(){
 
+      if((this.url.indexOf('http://'))<0){
+
+       this.url='http://'+this.url;
+      }
+
       this.styleObject={
         visibility: 'visible'
       };
